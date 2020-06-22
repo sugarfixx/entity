@@ -15,6 +15,9 @@ class CreateFieldsTable extends Migration
     {
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('field_types');
+
             $table->timestamps();
         });
     }

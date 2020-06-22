@@ -15,6 +15,8 @@ class CreateFieldValuesTable extends Migration
     {
         Schema::create('field_values', function (Blueprint $table) {
             $table->id();
+            $table->string('text_val');
+            $table->bigInteger('numeric_val');
             $table->timestamps();
         });
     }
